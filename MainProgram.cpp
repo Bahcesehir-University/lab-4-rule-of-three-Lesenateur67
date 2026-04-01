@@ -68,8 +68,8 @@ public:
         //   4. Copy input into m_data using strcpy()
         
         g_constructorCount++;
-        int len =strlen(input);
-        m_data=new char[len+1];
+        m_length =strlen(input);
+        m_data=new char[m_length+1];
         strcpy(m_data,input);
     }
 
@@ -128,7 +128,7 @@ public:
         {
             return *this;
         }
-            delete[] m_data;
+        delete[] m_data;
         m_length=other.m_length;
         m_data=new char[m_length+1];
         strcpy(m_data,other.m_data);
