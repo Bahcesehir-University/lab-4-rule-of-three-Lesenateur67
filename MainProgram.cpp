@@ -83,7 +83,7 @@ public:
         //   1. Increment g_destructorCount
         //   2. Delete the dynamically allocated array (delete[])
         
-        g_destructorCount--;
+        g_destructorCount++;
         delete[] m_data;
     }
 
