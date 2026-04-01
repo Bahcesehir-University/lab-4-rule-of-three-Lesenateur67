@@ -155,8 +155,8 @@ public:
         //   4. Copy newData into m_data using strcpy()
         
         delete[] m_data;
-        int len=strlen(newData);
-        m_data = new char[len+1];
+        m_length=strlen(newData);
+        m_data = new char[m_length+1];
         strcpy(m_data,newData);
     }
 
